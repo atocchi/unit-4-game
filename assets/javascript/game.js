@@ -5,6 +5,7 @@ $(document).ready(function() {
     let gemTwo = ((Math.floor(Math.random() * 15)) + 3);
     let gemThree = ((Math.floor(Math.random() * 5)) + 19);
     let gemFour = ((Math.floor(Math.random() * 50)) + 1);
+    let special = true;
     //I've given the root beers different ranges of values to make the game more intresting
     // Variables to store game info, win, loss, score
     let wins = 0;
@@ -19,6 +20,7 @@ $(document).ready(function() {
          gemThree = ((Math.floor(Math.random() * 5)) + 19);
          gemFour = ((Math.floor(Math.random() * 50)) + 1);
          score = 0;
+         special = true;
     }
     // Checks for win or loss
     function scoreChecker () {
@@ -67,6 +69,14 @@ $(document).ready(function() {
         score = score + gemFour;
         scoreChecker();
         $("#score").text("Score: " + score);
+    })
+    $("#special").on("click", function() {
+     if (special == true){
+        score = score + 1
+        special = false
+        scoreChecker();
+        $("#score").text("Score: " + score) 
+        }
     })
         
     
