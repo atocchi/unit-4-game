@@ -21,6 +21,7 @@ $(document).ready(function() {
          gemFour = ((Math.floor(Math.random() * 50)) + 1);
          score = 0;
          special = true;
+         $("#special").attr("src", "./assets/images/special.png")
     }
     // Checks for win or loss
     function scoreChecker () {
@@ -70,11 +71,13 @@ $(document).ready(function() {
         scoreChecker();
         $("#score").text("Score: " + score);
     })
+    //Special rootbeer float that can only be click once a round, should replace itself
     $("#special").on("click", function() {
      if (special == true){
         score = score + 1
         special = false
         scoreChecker();
+        $("#special").attr("src", "./assets/images/used.png")
         $("#score").text("Score: " + score) 
         }
     })
