@@ -13,11 +13,11 @@ $(document).ready(function() {
     
     // rest function, resets all vars on win/loss
     function reset () {
-        let target = ((Math.floor(Math.random() * 50)) + 50);
-        let gemOne = ((Math.floor(Math.random() * 5)) + 3);
-        let gemTwo = ((Math.floor(Math.random() * 15)) + 3);
-        let gemThree = ((Math.floor(Math.random() * 5)) + 19);
-        let gemFour = ((Math.floor(Math.random() * 50)) + 1);
+         target = ((Math.floor(Math.random() * 50)) + 50);
+         gemOne = ((Math.floor(Math.random() * 5)) + 3);
+         gemTwo = ((Math.floor(Math.random() * 15)) + 3);
+         gemThree = ((Math.floor(Math.random() * 5)) + 19);
+         gemFour = ((Math.floor(Math.random() * 50)) + 1);
          score = 0;
     }
     // Checks for win or loss
